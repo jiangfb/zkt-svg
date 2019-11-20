@@ -16,7 +16,8 @@ module.exports = function (source) {
 	try {
 		while ((result = re.exec(source)) !== null) {
 			const iconName = result[1];
-			const svgPath = path.resolve(__dirname, options.directory, `${iconName}.svg`);
+			let svgPath = path.resolve(__dirname, options.directory, `${iconName}.svg`);
+			svgPath = svgPath.replace(/\\/g, '/');
 			if (options.debug) console.log(svgPath);
 			requireSvgStr += `require("!svg-sprite-loader!${svgPath}")\n`;
 		}

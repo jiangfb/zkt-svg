@@ -1,6 +1,6 @@
 {
   "name": "zkt-svg",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "zkt react svg icon component",
   "main": "dist/index.js",
   "scripts": {
